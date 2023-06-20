@@ -27,16 +27,9 @@ export function Groups() {
       <FlatList
         data={groups}
         keyExtractor={(item) => item}
-        renderItem={({ item }) => (
-          <GroupCard
-            title={item}
-            onPress={() => console.log("clicou no item da lista")}
-          />
-        )}
+        renderItem={({ item }) => <GroupCard title={item} onPress={() => console.log("clicou no item da lista")} />}
         contentContainerStyle={groups.length === 0 && { flex: 1 }}
-        ListEmptyComponent={() => (
-          <ListEmpty message="Que tal cadastrar a primeira turma?" />
-        )}
+        ListEmptyComponent={() => <ListEmpty message="Que tal cadastrar a primeira turma?" />}
       />
 
       <Button title="Criar nova turma" onPress={handleNewGroup} />
