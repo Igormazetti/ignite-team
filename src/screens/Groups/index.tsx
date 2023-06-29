@@ -20,7 +20,7 @@ export function Groups() {
 
   return (
     <Container>
-      <Header showBackButton />
+      <Header />
 
       <Highlight title="Turmas" subtitle="jogue com a sua turma" />
 
